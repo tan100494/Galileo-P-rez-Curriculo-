@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Open+Sans:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "DM Serif Display", serif;
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    /*me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+
+}
+/*MENU*/
+.contenedor-header {
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+}
+.contenedor-header header .logo a {
+    font-family: "Bebas Neue", sans-serif;
+    color: red;
+    text-decoration: none;
+    font-size: 36px; 
+
+}
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: #ffffff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+
+}
+.contenedor-header header nav ul li a:hover {
+    color: red;
+
+}
+.nav-responsive {
+    background-color: red;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+
+}
+/*---- SECCION I N I C I O ----*/
+.inicio {
+    background:linear-gradient(to top, rgba(10,15,18,.8), rgba(10,15,18,1)),
+    url(imge/jpj.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+                                                                                       
+}
+.inicio .contenido-banner {
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid rgb(185, 18, 18);
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 25px;
+    font-size: 25px;
+    font-family: "DM Serif Display", serif;
+
+}
+
+.inicio .contenido-banner h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a {
+    color: blue;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid blue;
+    border-radius: 100%;
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    margin: 27px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: red;
+
+}
+
+.sobremi {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.sobremi .contenedor-seccion {
+    max-width: 1100px;
+    margin: auto;
+
+}
+.sobremi h2 {
+    font-size: 48px;
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    padding: 20px 0;
+   
+}
+.sobremi .contenido-seccion p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+}
+.sobremi .contenido-seccion p span {
+    color: red;
+    font-weight: bold;
+
+}
+.sobremi .fila {
+    display: flex;
+
+}
+
+.sobremi .fila .col {
+    width: 50%;
+
+}
+.sobremi .fila .col h3 {
+    font-size: 20px; 
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 25px;
+
+}
+.sobremi .fila .col ul {
+    list-style: none;
+
+}
+.sobremi .fila .col ul li {
+    margin: 12px 0;
+
+}
+.sobremi .fila .col ul li strong {
+    display: inline-block;
+    color: red;
+    width: 130px;
+
+}
+.sobremi .fila .col ul li span {
+    background-color: red;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+.sobremi .fila .col .contenedor-intereses {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.sobremi .fila .col .contenedor-intereses .interes {
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.sobremi .fila .col .contenedor-intereses .interes:hover {
+    background-color: red;
+
+}
+.sobremi .fila .col .contenedor-intereses .interes i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+    
+}
+.sobremi a {
+    text-decoration: none;
+}
+.sobremi button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: red;
+    z-index: -1;
+    transition: 1s;
+
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+
+}
+
+.skills {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.skills .contenedor-seccion {
+    max-width: 1100px;
+    margin: auto;
+
+}
+.skills h2 {
+    font-size: 48px;
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    padding: 20px 0;
+   
+}
+
+.skills .fila {
+    display: flex;
+}
+
+.skills .fila .col {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3 {
+    font-size: 25px;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 25px;
+
+}
+
+.skills .skill > span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+
+}
+.skills .skill .barra-skill {
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+.skills .skill .progreso {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+
+}
+.skills .skill .barra-skill span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -17px;
+    font-size: 14px;
+    
+}
+/* esta clase se agregaran directamente mediante javascript */
+.skills .skill .autocad {
+    width: 0;
+    animation: 2s autocad forwards;
+
+}
+@keyframes autocad {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+.skills .skill .arquitéctura {
+    width: 0;
+    animation: 2s arquitéctura forwards;
+
+}
+@keyframes arquitéctura {
+    0%{width: 0%;}
+    100%{width: 100%;}
+
+}
+.skills .skill .archicad {
+    width: 0;
+    animation: 2s archicad forwards;
+
+}
+@keyframes archicad {
+    0%{width: 0%;}
+    100%{width: 95%;}
+
+}
+.skills .skill .maquetas {
+    width: 0;
+    animation: 2s maquetas forwards;
+
+}
+@keyframes maquetas {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+.skills .skill .cálculodiseñoproyección {
+    width: 0;
+    animation: 2s cálculodiseñoproyección forwards;
+
+}
+@keyframes cálculodiseñoproyección {
+    0%{width: 0%;}
+    100%{width: 95%;}
+
+}
+.skills .skill .proyectos {
+    width: 0;
+    animation: 2s proyectos forwards;
+
+}
+@keyframes proyectos {
+    0%{width: 0%;}
+    100%{width: 95%;}
+    
+}
+.skills .skill .liderazgo {
+    width: 0;
+    animation: 2s liderazgo forwards;
+
+}
+@keyframes liderazgo {
+    0%{width: 0%;}
+    100%{width: 95%;}
+    
+}
+skills .skill .pensamientocrítico {
+    width: 0;
+    animation: 2s pensamientocrítico forwards;
+
+}
+@keyframes pensamientocrítico {
+    0%{width: 0%;}
+    100%{width: 85%;}
+    
+}
+/* sesion curriculom */
+.curriculo {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+.curriculo .contenedor-seccion {
+    max-width: 1100px;
+    margin: auto;
+
+}
+.curriculo h2 {
+    font-size: 48px;
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    padding: 20px 0;
+   
+}
+.curriculo .fila {
+    display: flex;
+
+}
+.curriculo .fila .col {
+    width: 50%;
+    padding: 0 20px;
+
+}
+.curriculo .fila .col h3 {
+    font-size: 28px;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 25px;
+
+}
+.curriculo .fila .izquierda {
+    border-right: 2px solid #252A2E;
+
+}
+.curriculo .fila .izquierda {
+    border-left: 2px solid #252A2E;
+
+}
+.curriculo .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+
+}
+.curriculo .fila .item  h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+.curriculo .fila .item .casa {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+
+}
+.curriculo .fila .item .fecha {
+    display: block;
+    color: red;
+    margin-bottom: 10px;
+
+}
+.curriculo .fila .item p {
+    line-height: 24px;
+
+}
+.curriculo .fila .izq {
+    border-right: 2px solid red;
+    margin-right: 20px;
+
+}
+.curriculo .fila .der {
+    border-right: 2px solid red;
+    margin-right: 20px;
+}
